@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  background-color: #2962ff;
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.container {
+  position: absolute;
+  left: 32.5%;
+  top: 12%;
+  border-radius: 0.5rem;
+  width: 35%;
+}
+
+.form {
+  padding: 30px 40px;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.form button {
+  cursor: pointer;
+  background-color: #0039cb;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+.form button:hover {
+  transform: translateY(-0.2rem);
+}
+.form button:active {
+  transform: translateY(0);
+  background-color: #0430a1;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.form-control label {
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+.form-control input {
+  border: 2px solid #fff;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.form-control input:focus {
+  outline: 0;
+  border-color: #0039cb;
+}
+.form-control.success input {
+  border-color: #27da71;
+}
+.form-control.error input {
+  border-color: #6d2214;
+}
+.form-control.error small {
+  visibility: visible;
+}
+.form-control small {
+  text-transform: uppercase;
+  color: #6d2214;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+}
+
+section {
+  width: 100%;
+  background: #2962ff;
+  overflow: hidden;
+}
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background: url("assets/wave.png");
+  background-size: 100rem 10rem;
+}
+section .wave1 {
+  animation: animate1 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .wave3 {
+  animation: animate1 15s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+section .wave4 {
+  animation: animate1 15s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+@keyframes animate1 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+@media all and (max-width: 900px) {
+  .container {
+    left: 20%;
+    top: 13%;
+    width: 60%;
+  }
+}
+@media all and (max-width: 450px) {
+  .container {
+    left: 5%;
+    top: 7%;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .form-control small {
+    font-size: 1rem;
+  }
+}
+@media all and (max-height: 667px) {
+  .container {
+    left: 5%;
+    top: 2%;
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
